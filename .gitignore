@@ -8,6 +8,7 @@ __pycache__/
 
 # Virtual environments
 venv/
+*.pkl
 
 # System files
 .DS_Store
