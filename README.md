@@ -43,7 +43,7 @@ To run the app, download the necessary data files here:<br/>
 
 <div class="center">
     <h2>Demonstration</h2>
-    <img class="demo-gif" src="https://media.giphy.com/media/your-demo-gif-url.gif" alt="MovieHelper Demo" />
+    <img class="demo-gif" src="movieHelper.gif" alt="MovieHelper Demo" />
 </div>
 
 </body>
