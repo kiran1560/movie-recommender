@@ -6,7 +6,7 @@ import os
 
 API_KEY = "8265bd1679663a7ea12ac168da84d2e8"
 
-# Dropbox direct download URLs for your files (dl=1 for direct download)
+# Dropbox direct download URLs
 DROPBOX_LINKS = {
     "movie_dict.pkl": "https://www.dropbox.com/scl/fi/hmprp1ttbofwdjuowca95/movie_dict.pkl?rlkey=jb4jn0jsk6y935ogqaewdv1y0&st=038jvsk2&dl=1",
     "similarity.pkl": "https://www.dropbox.com/scl/fi/rkae7cqrzf44ax5gsh35e/similarity.pkl?rlkey=2z60rnol2uww40m0hx6s9b9lt&st=retkjr9f&dl=1"
@@ -15,7 +15,7 @@ DROPBOX_LINKS = {
 def download_file(url, destination):
     response = requests.get(url, stream=True)
     if "text/html" in response.headers.get("Content-Type", ""):
-        raise ValueError(f"❌ Download failed: received HTML instead of file from {url}")
+        raise ValueError(f" Download failed: received HTML instead of file from {url}")
     with open(destination, "wb") as f:
         for chunk in response.iter_content(32768):
             if chunk:
@@ -49,11 +49,10 @@ def recommend(movie):
         posters.append(fetch_poster(movies.iloc[i[0]].id))
     return names, posters
 
-# ---- STREAMLIT APP STARTS HERE ----
+# STREAMLIT APP 
 st.set_page_config(page_title="Movie Recommender", layout="wide")
 st.title("🎬 MovieHelper: A Recommender System")
 
-# Download .pkl files if missing
 for fname, url in DROPBOX_LINKS.items():
     if not os.path.exists(fname):
         st.info(f"📥 Downloading {fname} from Dropbox...")
