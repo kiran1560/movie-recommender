@@ -40,7 +40,10 @@ To run the app, download the necessary data files here:<br/>
     Download movie_dict.pkl and similarity.pkl files
 </a>
 </p>
-
+<div class="center">
+    <h2>Deployed version</h2>
+    <p> https://movie-recommender-production-31d0.up.railway.app/ </p>
+</div>
 <div class="center">
     <h2>Demonstration</h2>
     <img class="demo-gif" src="movieHelper.gif" alt="MovieHelper Demo" />
