@@ -42,7 +42,7 @@ To run the app, download the necessary data files here:<br/>
 </p>
 <div class="center">
     <h2>Deployed version</h2>
-    <p> https://movie-recommender-production-31d0.up.railway.app/ </p>
+    <a href="https://movie-recommender-c4le.onrender.com/"> Movie Helper</a>
 </div>
 <div class="center">
     <h2>Demonstration</h2>
